@@ -1,5 +1,7 @@
 # fsguard-mcp
 
+[![PyPI](https://img.shields.io/pypi/v/fsguard-mcp.svg)](https://pypi.org/project/fsguard-mcp/)
+
 A filesystem + git MCP server that confines every operation to an allowed
 directory tree using **symlink-resolved path containment**, not string
 prefix matching.
@@ -65,7 +67,7 @@ Containment is checked, then a filesystem operation runs — there is an inheren
 
 ## Status
 
-68 passing tests (unit-level, with real symlinks and real git repos created on disk — not just string-logic assertions). Went through two rounds of adversarial security review before its first commit; both found real, working bypasses (a `..`-traversal escape through not-yet-existing paths on POSIX, and the `core.worktree` redirection above, among smaller findings) that are now fixed and covered by tests written directly against the reported exploit. Not yet published to PyPI.
+v0.1.0, live on PyPI. 68 passing tests (unit-level, with real symlinks and real git repos created on disk — not just string-logic assertions). Went through two rounds of adversarial security review before its first commit; both found real, working bypasses (a `..`-traversal escape through not-yet-existing paths on POSIX, and the `core.worktree` redirection above, among smaller findings) that are now fixed, covered by tests written directly against the reported exploit, and re-verified against a fresh `pip install` of the published package.
 
 ## License
 
