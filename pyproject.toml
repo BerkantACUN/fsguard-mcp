@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "Filesystem + git MCP server confined by symlink-resolved path containment, not string prefix matching."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "Berkant Acun" }]
 keywords = ["mcp", "model-context-protocol", "filesystem", "git", "security", "sandbox"]
 dependencies = [
